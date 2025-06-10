@@ -159,6 +159,13 @@ export class Language implements EnumItem {
     /* alphabet= */ "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя",
   );
 
+  static readonly ML = new Language(
+    /* id= */ "ml",
+    /* script= */ "malayalam",
+    /* direction= */ "ltr",
+    /* alphabet= */ "അആഇഈഉഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ",
+  );
+
   static readonly ALL = new Enum<Language>(
     Language.AR,
     Language.BE,
@@ -175,6 +182,7 @@ export class Language implements EnumItem {
     Language.HU,
     Language.IT,
     Language.LT,
+    Language.ML,
     Language.NB,
     Language.NL,
     Language.PL,
@@ -197,7 +205,8 @@ export class Language implements EnumItem {
     | "greek"
     | "hebrew"
     | "latin"
-    | "thai";
+    | "thai"
+    | "malayalam";
   /** The direction of the writing system, either "ltr" for left-to-right, or "rtl" for right-to-left. */
   readonly direction: "ltr" | "rtl";
   /** The list of alphabet code points. */
@@ -217,7 +226,14 @@ export class Language implements EnumItem {
 
   private constructor(
     id: string,
-    script: "arabic" | "cyrillic" | "greek" | "hebrew" | "latin" | "thai",
+    script:
+      | "arabic"
+      | "cyrillic"
+      | "greek"
+      | "hebrew"
+      | "latin"
+      | "thai"
+      | "malayalam",
     direction: "ltr" | "rtl",
     alphabet: string,
   ) {
@@ -365,5 +381,7 @@ export function getExampleLetters({ script }: Language): CodePoint[] {
       return [0x0061, 0x0062, 0x0063, 0x0064, 0x0065, 0x0066];
     case "thai":
       return [0x0e01, 0x0e02, 0x0e04, 0x0e06, 0x0e07, 0x0e08];
+    case "malayalam":
+      return [0x0d05, 0x0d06, 0x0d07, 0x0d08, 0x0d09, 0x0d0a];
   }
 }

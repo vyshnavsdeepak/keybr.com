@@ -3,7 +3,7 @@ import { type CSSProperties } from "react";
 export type FontWeight = "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
 export type FontStyle = "normal" | "italic";
 export type Fallback = "cursive" | "fantasy" | "monospace" | "sans-serif" | "serif" | "whitespace" | string;
-export type Script = "arabic" | "cyrillic" | "greek" | "hebrew" | "latin" | "thai";
+export type Script = "arabic" | "cyrillic" | "greek" | "hebrew" | "latin" | "thai" | "malayalam";
 
 export class FontFace {
   readonly family: string;
@@ -40,6 +40,7 @@ const cgl = ["cyrillic", "greek", "latin"] as const satisfies Script[];
 const cghl = ["cyrillic", "greek", "hebrew", "latin"] as const satisfies Script[];
 const achl = ["arabic", "cyrillic", "hebrew", "latin"] as const satisfies Script[];
 const acghlt = ["arabic", "cyrillic", "greek", "hebrew", "latin", "thai"] as const satisfies Script[];
+const ml = ["malayalam"] as const satisfies Script[];
 
 export const ARAD = new FontFace("Arad", "400", "normal", ["whitespace"], ["arabic"]);
 export const ARAD_B = new FontFace("Arad", "700", "normal", ["whitespace"], ["arabic"]);
@@ -55,6 +56,7 @@ export const NUNITO = new FontFace("Nunito", "400", "normal", ["sans-serif"], cl
 export const NUNITO_I = new FontFace("Nunito", "400", "italic", ["sans-serif"], cl);
 export const NUNITO_B = new FontFace("Nunito", "700", "normal", ["sans-serif"], cl);
 export const NUNITO_BI = new FontFace("Nunito", "700", "italic", ["sans-serif"], cl);
+export const NOTO_SANS_MALAYALAM = new FontFace("Noto Sans Malayalam", "400", "normal", ["sans-serif"], ml);
 export const OPEN_DYSLEXIC = new FontFace("Open Dyslexic", "400", "normal", ["sans-serif"], cgl);
 export const OPEN_DYSLEXIC_I = new FontFace("Open Dyslexic", "400", "italic", ["sans-serif"], cgl);
 export const OPEN_DYSLEXIC_B = new FontFace("Open Dyslexic", "700", "normal", ["sans-serif"], cgl);
@@ -175,6 +177,7 @@ export const FONTS_FACES: readonly FontFace[] = [
   OPEN_DYSLEXIC_I,
   OPEN_DYSLEXIC_B,
   OPEN_DYSLEXIC_BI,
+  NOTO_SANS_MALAYALAM,
 ];
 
 function fontName(family: string, weight: FontWeight, style: FontStyle): string {

@@ -1143,6 +1143,16 @@ export class Layout implements XEnumItem {
     /* geometries= */ new Enum(Geometry.MATRIX),
   );
 
+  static readonly ML_IN = new Layout(
+    /* id= */ "ml-in",
+    /* xid= */ 0xaa,
+    /* name= */ "Malayalam (InScript)",
+    /* family= */ "ml-in",
+    /* language= */ Language.ML,
+    /* emulate= */ true,
+    /* geometries= */ new Enum(Geometry.ISO_102, Geometry.ANSI_101),
+  );
+
   static readonly ALL = new XEnum<Layout>(
     Layout.EN_US,
     Layout.EN_DVORAK,
@@ -1223,6 +1233,7 @@ export class Layout implements XEnumItem {
     Layout.TH_PAT,
     Layout.TH_MAN,
     Layout.RO_RO,
+    Layout.ML_IN,
   );
 
   static findLayout(localeId: string): Layout | null {
