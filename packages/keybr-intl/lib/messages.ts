@@ -165,6 +165,13 @@ export async function loadMessages(locale: LocaleId): Promise<Messages> {
           { with: { type: "json" } }
         )
       ).default;
+    case "ml":
+      return (
+        await import(
+          /* webpackChunkName: "messages-ml" */ "./messages/ml.json",
+          { with: { type: "json" } }
+        )
+      ).default;
     case "ne":
       return (
         await import(

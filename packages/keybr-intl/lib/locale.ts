@@ -47,6 +47,7 @@ export const allLocales: readonly LocaleId[] = [
   "it",
   "ja",
   "ko",
+  "ml",
   "ne",
   "nl",
   "pl",
