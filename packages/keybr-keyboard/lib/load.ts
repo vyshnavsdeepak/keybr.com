@@ -72,6 +72,7 @@ import { LAYOUT_HU_HU } from "./layout/hu_hu.ts";
 import { LAYOUT_IT_IT } from "./layout/it_it.ts";
 import { LAYOUT_JA_JP_JIS } from "./layout/ja_jp_jis.ts";
 import { LAYOUT_LT_LT } from "./layout/lt_lt.ts";
+import { LAYOUT_ML_IN } from "./layout/ml_in.ts";
 import { LAYOUT_NB_KVIKK } from "./layout/nb_kvikk.ts";
 import { LAYOUT_NB_NO } from "./layout/nb_no.ts";
 import { LAYOUT_NB_SKARP } from "./layout/nb_skarp.ts";
@@ -175,6 +176,7 @@ const layouts = new Map<Layout, CharacterDict>([
   [Layout.TR_TR_Q, LAYOUT_TR_TR_Q],
   [Layout.UK_UA, LAYOUT_UK_UA],
   [Layout.DE_ADNW_BUT_XCV, LAYOUT_DE_ADNW_BUT_XCV],
+  [Layout.ML_IN, LAYOUT_ML_IN],
 ]);
 
 const geometries = new Map<Geometry, GeometryDict>([
